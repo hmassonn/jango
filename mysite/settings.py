@@ -74,12 +74,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -87,7 +87,7 @@ DATABASES = {
         'USER': 'docker',
         'PASSWORD' : 'docker',
         'HOST': '192.168.99.100', # set in docker-compose.yml
-        'PORT': 32771 # default postgres port
+        'PORT': 32772 # default postgres port
     }
 }
 
