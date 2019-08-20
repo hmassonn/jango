@@ -87,7 +87,7 @@ DATABASES = {
         'USER': 'docker',
         'PASSWORD' : 'docker',
         'HOST': '192.168.99.100', # set in docker-compose.yml
-        'PORT': 32770 # default postgres port
+        'PORT': 32771 # default postgres port
     }
 }
 
