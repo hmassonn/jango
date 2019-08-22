@@ -1,4 +1,4 @@
-docker start djngo
+docker-machine start django
 eval $(docker-machine env django)
 docker run -P --name pg_test eg_postgresql
 docker container ls
