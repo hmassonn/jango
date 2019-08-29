@@ -13,7 +13,7 @@ class Product(models.Model):
     image = models.CharField(max_length=200, default='unsee')
     price = models.CharField(max_length=30, default='unsee')
     description = models.CharField(max_length=200, default='unsee')
-    categories = models.ForeignKey(Category, on_delete=models.CASCADE, default='unsee')
+    categories = models.ForeignKey(Category, on_delete=models.CASCADE, default=0)
     # question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     def __str__(self):

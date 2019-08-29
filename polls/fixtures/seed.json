@@ -1,0 +1,32 @@
+[
+    {
+      "model": "polls.Category",
+      "pk": 1,
+      "fields": {
+        "title": "Burgers",
+        "name": "Burgers"
+      }
+    },
+    {
+      "model": "polls.product",
+      "pk": 1,
+      "fields": {
+        "title": "Classique",
+        "image": "https://s3.amazonaws.com/ODNUploads/55342be529eaeangus_classic_double_1440x640.jpg",
+        "price": "4.3",
+        "description": "Steak - Cheddar - Tomate - Oignons - Cornichons - Salade - Sauce Burger",
+        "categories": 1
+      }
+    },
+    {
+      "model": "polls.product",
+      "pk": 2,
+      "fields": {
+        "title": "Bacon",
+        "image": "https://znn.fr/wp-content/uploads/2016/02/bacon_double_cheeseburger.jpg",
+        "price": "4.6",
+        "description": "Steak - Bacon - Cheddar - Tomate - Oignons - Cornichons - Salade - Sauce Burger",
+        "categories": 1
+      }
+    }
+  ]
