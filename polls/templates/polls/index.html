@@ -1,4 +1,4 @@
-{% if latest_product_list %}
+<!-- {% if latest_product_list %}
     <ul>
     {% for product in latest_product_list %}
         <li><a href="{% url 'polls:detail' product.id %}">{{ product.question_text }}</a></li>
@@ -6,4 +6,69 @@
     </ul>
 {% else %}
     <p>No polls are available.</p>
-{% endif %}
+{% endif %} -->
+
+<div id="slide">
+    <div class="image-container"></div>
+</div>
+<div class="title">
+    <div class="container">
+        <div class="path">
+            <h4>
+                <i class="fa fa-home"></i>
+                Home
+            </h4>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="produits">
+        <!-- <?php if(!empty($_SESSION['succes'])): ?>
+            <div class="succes">
+                <i class="fa fa-check"></i>
+                <?= $_SESSION['succes']; ?>
+            </div>
+        <?php endif; ?>
+        <?php unset($_SESSION['succes']); ?> -->
+        <h3 class="sous-title">
+            <i class="fa fa-cutlery"></i>
+            Nos produits
+            <p>
+                Le meilleur de nos produits
+            </p>
+        </h3>
+        <div class="products">
+            {% if latest_product_list %}
+            {% for product in latest_product_list %}
+        <!-- <?php foreach($allCategory as $oneCat)
+        {
+            foreach($oneCat as $key => $value)
+            {
+                if ($key === "title") { ?> -->
+            <div class="item-product">
+                <div class="header">
+                    <div class="type {% url product.title %}">
+                        <a href="{% url 'polls:detail' product.id %}">
+                            <img src="{% url product.image %}">
+                        </a>
+                    </div>
+                    <div class="infos">
+                        Nos {% url product.title %}
+                    </div>
+                </div>
+                <!-- <a href="produits.php?produits=<?php echo $oneCat[$key+1]; ?>&submit=ok"><div class="illustration-<?php echo $value; ?>"></div></a> -->
+                <div class="status">
+                    <!-- <div class="disponible <?php echo $value; ?>"> -->
+                        <p>Le stock est disponible</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <!-- <?php	}
+            }
+        } ?> -->
+    </div>
+        </div>
+    </div>
+</div>

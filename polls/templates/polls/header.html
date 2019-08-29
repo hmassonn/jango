@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>42Food - Home</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/css/main.css' %}" />
+        <link rel="stylesheet" type="text/css" href="../static/polls/css/main.css" />
+    </head>
+    <body>
+
+        <!-- Haut de page !-->
+            <header id="header">
+                <nav class="customer">
+                    <li class="logo">
+                        <a href="index.php"><img src="https://freeiconshop.com/wp-content/uploads/edd/burger-flat.png"></a>
+                    </li>
+                    <li style="float: left">
+                        <a href="produits.php">
+                            Produits
+                        </a>
+                    </li>
+                    <!-- <?php if(!$user): ?>
+                        <li>
+                            <a href="panier.php">
+                                Mon Panier
+                                <span class="badge">
+                                    <?php
+                                        if($_SESSION['basket_total_count'] < 0)
+                                            $_SESSION['basket_total_count'] = 0;
+                                        echo $_SESSION['basket_total_count'];
+                                    ?>
+                                </span>
+                                <span class="badge">
+									<?php if (isset($_SESSION['basket']) && $_SESSION['basket'] != null) {
+									foreach ($_SESSION['basket'] as $productId => $productCount)
+									{
+										$product = getOneProduct($productId);
+										$totalProductPrice = floatval($product['price'] * floatval($productCount));
+										$totalPrice = isset($totalPrice) ? $totalPrice + $totalProductPrice : $totalProductPrice;
+									} }
+									else
+										$totalPrice = 0;
+									echo $totalPrice."€"; ?>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="connexion.php">
+                                Connexion
+                            </a>
+                        </li>
+                    <?php endif; ?> -->
+                    <!-- <?php if($user['admin'] == '0'): ?>
+                        <li class="count-articles">
+                            <a href="logout.php" style="color: white">
+                                Déconnexion
+                            </a>
+                        </li>
+                        <li>
+                            <a href="panier.php">
+                                <i class="fa fa-shopping-cart"></i>
+                                Mon Panier
+                                <span class="badge">
+                                    <?php
+                                        if($_SESSION['basket_total_count'] < 0)
+                                            $_SESSION['basket_total_count'] = 0;
+                                        echo $_SESSION['basket_total_count'];
+                                    ?>
+                                </span>
+                                <span class="badge">
+									<?php if (isset($_SESSION['basket']) && $_SESSION['basket'] != null) {
+									foreach ($_SESSION['basket'] as $productId => $productCount)
+									{
+										$product = getOneProduct($productId);
+										$totalProductPrice = floatval($product['price'] * floatval($productCount));
+										$totalPrice = isset($totalPrice) ? $totalPrice + $totalProductPrice : $totalProductPrice;
+									} }
+									else
+										$totalPrice = 0;
+									echo $totalPrice."€"; ?>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profil.php">
+                                Mon compte
+                            </a>
+                        </li>
+                    <?php endif; ?> -->
+                    <!-- <?php if($user['admin'] == '1'): ?>
+                        <li class="count-articles">
+                            <a href="logout.php" style="color: white">
+                                Déconnexion
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profil.php">
+                                Administration
+                            </a>
+                        </li>
+                        <li>
+                            <a href="commandes.php">
+                               Commandes
+                            </a>
+                        </li>
+                    <?php endif; ?> -->
+                </nav>
+            </header>

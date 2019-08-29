@@ -3,6 +3,9 @@ import datetime
 from django.db import models
 from django.utils import timezone
 
+class Category(models.Model):
+    name = models.CharField(max_length=30)
+
 class Product(models.Model):
     title = models.CharField(max_length=30)
     image = models.CharField(max_length=200)
@@ -22,6 +25,3 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text
-
-class Category(models.Model):
-    name = models.CharField(max_length=30)
