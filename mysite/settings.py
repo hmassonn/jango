@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -70,7 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -87,7 +85,7 @@ DATABASES = {
         'USER': 'docker',
         'PASSWORD' : 'docker',
         'HOST': '192.168.99.100', # set in docker-compose.yml
-        'PORT': 32772 # default postgres port
+        'PORT': 32768 # default postgres port
     }
 }
 
@@ -129,3 +127,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    '/sgoinfre/goinfre/Perso/hmassonn/djangi/jango/static/polls/css/',
+]

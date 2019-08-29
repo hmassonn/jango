@@ -1,6 +1,6 @@
 docker-machine start django
 eval $(docker-machine env django)
-docker run -P --name pg_test eg_postgresql
+docker run --rm -P --name pg_test eg_postgresql
 docker container ls
 # modify mysite/settings.py
 python3 manage.py runserver 8080
