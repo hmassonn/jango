@@ -16,3 +16,6 @@ python3 manage.py runserver 8080
 python3 manage.py makemigrations polls
 python3 manage.py migrate
 python3 manage.py createsuperuser
+
+
+docker run -p 3306:3306 --restart on-failure --name=random_db -e MYSQL_ROOT_PASSWORD=my_mdp -e MYSQL_DATABASE=my_db mysql
